@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/landPage.css">
+    <link rel="shortcut icon" href="/img/ed_logo.PNG" type="image/png">
+
+    <title>Growdev Users</title>
+
+
+     
+
+</head>
+
+<body>
+    <!-- Área Inicial -->
+    <div id="landPage">
+
+        <div id="container">
+
+            <div id="entry">
+                <div id="user">
+                    <img src="/img/user.PNG" alt="GrowDev Users">
+                    <!-- Usuário -->
+                    <!-- Page register -->
+                    <!-- Recover Password -->
+                    <div class="form-group register recover">
+                        <label for="user"></label>
+                        <input type="text" id="userInput" placeholder="Usuário" value="" required />
+                    </div>
+
+                    <!-- E-mail -->
+                    <!-- Page register -->
+                    <!-- Page Login -->
+                    <!-- Recover Password -->
+                    <div class="form-group register login recover">
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="E-mail" value=""
+                            onkeyup="changeColor()" required />
+                    </div>
+                    <!-- Senha -->
+                    <!-- Page register -->
+                    <!-- Page Login -->
+                    <div class="form-group register login">
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="senha" value=""
+                            onkeyup="changeColor()" required />
+                        <button onclick="mudar()" id="show">Mostrar</button>
+                    </div>
+                    <!-- Confirmar Senha -->
+                    <!-- Page register -->
+                    <div class="form-group register">
+                        <label for="confirmPassword"></label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar senha"
+                            value="" required />
+                    </div>
+
+                    <!-- Botões -->
+                    <!-- Page register -->
+                    <div class="register button">
+                        <button type="submit" onclick="register()">Cadastrar</button>
+                    </div>
+                    <!-- Recover Password -->
+                    <div class="recover button">
+                        <button type="submit" onclick="recover()">Recuperar</button>
+                    </div>
+                    <!-- Page Login -->
+                    <div class="login button">
+                        <button type="submit" onclick="login()">Entrar</button>
+                    </div>
+
+
+                    <!-- Page Login -->
+                    <span class="span">
+
+                        <div id="or">
+                            <hr>
+                            <strong>
+
+                                <p>
+                                    OU
+                                </p>
+
+                            </strong>
+                            <hr>
+                        </div>
+
+                        <div id="face">
+
+                            <a href="https://www.facebook.com/" target="_blank"><img src="/img/face.png" alt="Facebook">
+                                <p><strong>Entrar com o Facebook</strong></p>
+                            </a>
+
+                        </div>
+                    </span>
+                </div>
+                <span class="span">
+
+                    <div id="forgot">
+
+                        <a onclick="recoverPassword()">Esqueceu a Senha?</a>
+
+                    </div>
+                </span>
+
+
+
+            </div>
+            <span class="span">
+
+                <div id="new">
+                    <p>Não tem uma conta? <a onclick="registerNewUser()">
+                            <p><strong> Cadastre-se</strong></p>
+                        </a>
+                    </p>
+                </div>
+                <div id="store">
+                    <p>Obtenha o aplicativo.</p>
+                    <div id="imagem">
+                        <a href="https://www.apple.com/br" target="_blank">
+                            <img src="/img/app_store.png" alt="App Store">
+
+                        </a>
+                        <a href="https://play.google.com/" target="_blank">
+                            <img src="/img/googleplay.png" alt="Google Play">
+                        </a>
+                    </div>
+                </div>
+
+            </span>
+        </div>
+
+    </div>
+
+    <!-- Área Logada -->
+    <div id="page">
+        <div id="dadosUser">
+            <h1 class="nameUser"></h1>
+            <a onclick="openJanela()"><img src="/img/discord_user.png" alt="photoUser"></a>
+        </div>
+        <div id="history">
+
+        </div>
+        <div id="janela">
+            <div id="logout">
+                <a onclick="logout()"><img src="/img/desligar.jpg" alt="sair"> Sair</a>
+            </div>
+        </div>
+    </div>
+    <div id="fundo">
+
+    </div>
+    <script src="/javaScript/user.js"></script>
+
+    <script src="/javaScript/landPage.js"></script>
+
+
+</body>
+
+
+</html>

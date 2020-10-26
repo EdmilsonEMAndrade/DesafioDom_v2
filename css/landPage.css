@@ -1,0 +1,345 @@
+html{
+
+    margin: 0;
+    padding: 0;
+    background:#2b385b; 
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#fundo{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/img/fundo.jpg");
+    opacity: 0.08;
+    z-index: -1;
+}
+
+#landPage{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+
+#entry{
+
+    width: 350px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: white;
+    margin:10px;
+    padding: 10px;
+    border: 1;
+    border-radius: .5rem;
+
+}
+
+#user{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 348px;
+    height: 355px;
+    border: 50px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    
+}
+#user img{
+
+    margin-top: 0px;
+    margin-bottom: 30px;
+    
+}
+
+#email{
+
+    border-radius: .5rem;
+
+}
+
+
+
+#or{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(175, 175, 175);;
+    
+}
+
+#or hr{
+
+    width: 100px;
+    margin:0 10px;
+
+}
+
+#or p{
+
+    font-size: 14.5;
+    margin: 0 18px;
+
+}
+
+#face a{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#face p{
+
+    color:#2b385b;
+    font-size: .9rem;
+    margin-left: .5rem;
+    
+}
+
+#face img{
+
+    height: 16px;
+    width: 16px;
+    margin: 0;
+    
+}
+
+#forgot{
+
+    font-size: 14px;
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+        
+}
+
+#forgot a{
+
+    color: #00376B;
+
+}
+
+#new{
+
+    background-color: white;
+    width: 350px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+#new p{
+
+    font-size: 14px;
+
+}
+
+#new a{
+
+    color: #E16E0E;
+
+}
+
+#store{
+
+    margin: 0 10px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#store img{
+    
+    width: 136px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 0.5rem;
+
+}
+#store p{
+
+    color: white;
+
+}
+
+#show, #password, #email, .form-group{
+
+    background-color: #FAFAFA;
+
+}
+
+/* -------------class-------------------*/
+
+.form-group button{
+    /* Botão Mostar/Ocultar */
+    background-color: #FAFAFA;
+    border-radius: 0 .5rem .5rem 0;
+    border: none;
+    outline: 0;
+
+}
+
+.form-group input{
+    
+    width: 260px;
+    height: 36px;
+    background-color: #FAFAFA;
+    border-radius: .5rem 0 0 .5rem;
+    border: none;
+    outline: 0;
+    
+}
+.form-group input:hover, .form-group button:hover {
+    
+    background-color: #E8F0FE;
+
+}
+
+.form-group{
+    margin-top: 1vh;
+    width: 268px;
+    display: flex;
+    background-color: #FAFAFA;
+    border-radius: .5rem;
+    border: 1px solid;
+    border-color: #e4e4e4 ;
+    
+}
+.button button{
+    margin-top: 1vh;
+    height:29.6px;
+    width: 268px;
+    background-color: #E16E0E;
+    font-size: 17.6px;
+    color: white;
+    border-radius: .5rem;
+    border-color: white;
+    
+}
+
+/* ---------Geral---------*/
+
+a, button{
+
+    cursor: pointer;
+
+}
+a:link{
+
+    text-decoration:none;
+
+}
+
+
+/*Page Login*/
+.recover, .register{
+    display: none;
+}
+.login{
+    display: flex;
+}
+.span{
+    display: block;
+}
+/*Page Register*/
+/* .recover, .login{
+    display: none;
+}
+.register{
+    display: flex;
+}
+.span{
+    display: none;
+} */
+/*Page Recover*/
+/* .register, .login{
+    display: none;
+}
+.recover{
+    display: flex;
+}
+.span{
+    display: none;
+} */
+
+
+/* -------------midia-------------------*/
+
+/*--------------Área Logada--------------------*/
+#page{
+
+    display: none;
+    flex-direction: column;
+
+}
+#dadosUser{
+
+    margin: 0 2vw;
+    width: 95vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#dadosUser img{
+
+    height: 7.5vh;
+    
+}
+#history{
+
+    margin: 0;
+    background-color: white;
+    border-radius: .5rem;
+    height: 85.5vh;
+    width: 99vw;
+
+}
+#janela{
+    position: relative;
+}
+#logout{
+    position: absolute;
+    right: 0;
+    top: -85.5vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    width: 10vw;
+    border-radius: .5rem;
+    border: solid 1px black;
+
+}
+#logout img{
+    
+    width: 2vh;
+
+}
+h1{
+    
+    color: white;
+
+}
