@@ -2,10 +2,11 @@ html{
 
     margin: 0;
     padding: 0;
-    background:#2b385b; 
+    
     font-family: 'Poppins', sans-serif;
 
 }
+
 
 #fundo{
     
@@ -14,7 +15,7 @@ html{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/img/fundo.jpg");
+    background-image: url("/img/carros.PNG");
     opacity: 0.08;
     z-index: -1;
 }
@@ -154,7 +155,7 @@ html{
 
 #new a{
 
-    color: #E16E0E;
+    color: #2b385b;
 
 }
 
@@ -182,7 +183,7 @@ html{
 
 }
 
-#show, #password, #email, .form-group{
+#show, #password, #email, .form-group-ed{
 
     background-color: #FAFAFA;
 
@@ -190,7 +191,7 @@ html{
 
 /* -------------class-------------------*/
 
-.form-group button{
+.form-group-ed button{
     /* Botão Mostar/Ocultar */
     background-color: #FAFAFA;
     border-radius: 0 .5rem .5rem 0;
@@ -199,7 +200,7 @@ html{
 
 }
 
-.form-group input{
+.form-group-ed input{
     
     width: 260px;
     height: 36px;
@@ -209,13 +210,13 @@ html{
     outline: 0;
     
 }
-.form-group input:hover, .form-group button:hover {
+.form-group-ed input:hover, .form-group-ed button:hover {
     
     background-color: #E8F0FE;
 
 }
 
-.form-group{
+.form-group-ed{
     margin-top: 1vh;
     width: 268px;
     display: flex;
@@ -229,7 +230,7 @@ html{
     margin-top: 1vh;
     height:29.6px;
     width: 268px;
-    background-color: #E16E0E;
+    background-color: #2b385b;
     font-size: 17.6px;
     color: white;
     border-radius: .5rem;
@@ -308,12 +309,19 @@ a:link{
     
 }
 #history{
-
+display: flex;
+align-items: center;
+justify-content: center;
     margin: 0;
     background-color: white;
     border-radius: .5rem;
     height: 85.5vh;
-    width: 99vw;
+    width: 100vw;
+
+}
+#history h1{
+    
+    color: black;
 
 }
 #janela{

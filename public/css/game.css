@@ -1,0 +1,91 @@
+body {
+  background-color: #2b385b; 
+}
+#game{
+  height: 85.5vh;
+    width: 100vw;
+  position: relative;
+}
+.desafiante{
+    
+
+    box-shadow:         -35px 0px 14px rgba(212, 216, 18, 0.5);
+    /* box-shadow: -35px 32px 14px green; */
+}
+.desafiante2{
+  box-shadow:         35px 0px 14px rgba(212, 216, 18, 0.5);
+
+}
+li{
+  width: 15rem;
+}
+li.borderless {
+  border: 0 none;
+}
+.tamanhoCard {
+  width: 18.5rem;
+}
+.card-body{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+.front img {
+  width: 15rem;
+  margin-top: .5rem;
+  height: 164px;
+  
+}
+.border10 {
+  border: 10px rgb(202, 188, 188) solid;
+  border-radius: 10px;
+}
+li:hover {
+  background-color:grey;
+}
+
+.tamanhoCarta{
+  width: 295px;
+  height: 481px;
+
+  
+  
+}
+.vs{
+  margin-right: 15px;
+
+}
+col-md-auto{
+  padding: 0 !important;
+}
+#vs {
+  width: 3rem;
+  align-self: center;
+}
+
+
+
+.nomeCarro{
+    height: 2rem;
+}
+
+#game{
+  justify-content: center;
+}
+
+@media (min-width: 450px) {
+  #vs {
+    width: 3rem;
+    
+  }
+  #game{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
