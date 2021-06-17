@@ -1,0 +1,2 @@
+const image = ["naruto", "seya", "goku", "metabots", "sword", "jaspion", "power", "thunder", "heman", "capitao"];
+//const image = [["naruto", "seya", "goku", "metabots", "sword", "jaspion", "power"], ["github", "linkedin", "whatsapp",]]

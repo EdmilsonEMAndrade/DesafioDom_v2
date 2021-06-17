@@ -40,29 +40,15 @@ function mudar() {
         buttonShow.innerHTML = "Ocultar";
         fieldPassword.setAttribute('type', 'text')
     };
+
 };
 
-function changeColor() {
-
-
-    /* if ((fieldPassword[0].value == "") && (emailUser.value == "")) {
-         fieldPassword[0].style.backgroundColor = '#FAFAFA';
-         emailUser.style.backgroundColor = '#FAFAFA';
-         mostrarSenha[0].style.backgroundColor = '#FAFAFA';
-         formUser[0].style.backgroundColor = '#FAFAFA';
-     }
-     else {
-         fieldPassword[0].style.backgroundColor = '#E8F0FE';
-         emailUser.style.backgroundColor = '#E8F0FE';
-         mostrarSenha[0].style.backgroundColor = '#E8F0FE';
-         formUser[0].style.backgroundColor = '#E8F0FE';
-     }*/
-
-}
 function hideRecover() {
+
     for (site of recoverPage) {
         site.style.display = `none`;
     }
+
 }
 function hideLogin() {
 
@@ -75,11 +61,14 @@ function hideLogin() {
 
 }
 function hideRegister() {
+
     for (site of registerPage) {
         site.style.display = `none`;
     }
+
 }
 function registerNewUser() {
+
     hideRecover();
     hideLogin();
     for (site of registerPage) {
@@ -88,13 +77,16 @@ function registerNewUser() {
 
 }
 function recoverPassword() {
+
     hideRegister();
     hideLogin();
     for (site of recoverPage) {
         site.style.display = `flex`;
     }
+
 }
 function showLogin() {
+
     landPage.style.display = `flex`;
     hideRegister();
     hideRecover();
@@ -108,15 +100,18 @@ function showLogin() {
 }
 
 function login() {
-    for (let index = 0; index < user.length; index++) {
+    for (const index in user) {
 
         if (emailUser.value == user[index].email && fieldPassword.value == user[index].password) {
+
             landPage.style.display = `none`;
             page.style.display = `flex`;
             inicializarPage(index)
             return
         }
+
     }
+
     alert(`Verifique seu e-mail ou senha.`)
 
 }
@@ -124,50 +119,70 @@ function login() {
 function open() {
 
     if (localStorage.getItem(`email`)) {
-        for (let index = 0; index < user.length; index++) {
+        for (const index in user) {
+
             if (user[index].email == localStorage.getItem(`email`)) {
+
                 landPage.style.display = `none`;
                 page.style.display = `flex`;
                 inicializarPage(index)
                 return
+
             }
+
         }
+
     }
 }
 
 function inicializarPage(n) {
+
+    localStorage.setItem("index", n)
     localStorage.setItem("email", user[n].email)
     pageH1[0].innerHTML = `Olá ${user[n].usuario}`
-}
 
+}
+function record(n) {
+
+    user[localStorage.getItem("index")].record = n;
+    console.log(user[localStorage.getItem("index")])
+
+}
 function openJanela() {
+
     showJanela = !showJanela;
     if (showJanela) {
         janela.style.display = `flex`
     } else {
         janela.style.display = `none`
     }
+
 }
 function logout() {
+
+    showJanela = !showJanela;
     page.style.display = `none`
+    janela.style.display = `none`
     localStorage.clear();
     showLogin();
+
 }
 function recover() {
 
-    for (let index = 0; index < user.length; index++) {
+    for (const index in user) {
         if (user[index].usuario == userInput.value && user[index].email == emailUser.value) {
             alert(`A senha é ${user[index].password}`)
             showLogin()
             return
         }
 
-
     }
+
+
     alert(`Usuário ou E-mail não cadastrado`)
 }
 function register() {
-    for (let index = 0; index < user.length; index++) {
+    for (const index in user) {
         if (user[index].usuario === userInput.value) {
             alert(`Usuário ${userInput.value} já existente`)
             return
@@ -176,8 +191,8 @@ function register() {
             alert(`E-mail ${emailUser.value} já cadastrado`)
             return
         }
-
     }
+
 
     if ((emailUser.value.indexOf(`@`) > -1) && ((fieldPassword.value === confirmPassword.value) && (fieldPassword.value != ""))
         && (userInput.value != "")) {
@@ -198,4 +213,5 @@ function register() {
     }
 
 }
+
 open()
